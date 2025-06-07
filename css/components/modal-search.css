@@ -1,0 +1,195 @@
+.modal-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 999;
+    opacity: 0;
+    transition: 0.3s ease all;
+}
+.modal-search::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.modal-wrapper {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.modal-search .modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.modal-search .modal-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.modal-search .search-form {
+    margin-bottom: 20px;
+}
+.modal-search .search {
+    display: flex;
+    gap: 10px;
+}
+.modal-search .search input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.modal-search .search input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+.modal-search .search button {
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.modal-search .search button:hover {
+    background-color: #555;
+}
+.modal-search .search-result {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.modal-search .search-heading {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.modal-search .search-heading h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+.modal-search .results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.modal-search .result-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.modal-search .result-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.modal-search .search-result-link {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    color: inherit;
+    text-decoration: none;
+}
+.modal-search .search-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.modal-search .search-info {
+    flex: 1;
+}
+.modal-search .search-info h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+.modal-search .search-price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.modal-search .no-results {
+    grid-column: 1 / -1;
+    padding: 20px;
+    text-align: center;
+    border: none;
+}
+.modal-search .no-results p {
+    color: #666;
+    margin-bottom: 10px;
+}
+.modal-search .search-suggestions {
+    font-weight: 500;
+    margin-top: 15px;
+}
+.modal-search .no-results ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.modal-search .no-results li {
+    color: #666;
+    margin: 5px 0;
+}
+.modal-search .bi-x-circle {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+.modal-search .bi-x-circle:hover {
+    color: #333;
+}
+@media (max-width: 768px) {
+    .modal-wrapper {
+        margin: 20px;
+        padding: 20px;
+    }
+    .modal-search .results {
+        grid-template-columns: 1fr;
+    }
+    .modal-search .search-thumb {
+        width: 60px;
+        height: 60px;
+    }
+    .modal-search .search-info h4 {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .modal-search .modal-title {
+        font-size: 20px;
+    }
+    .modal-search .search {
+        flex-direction: column;
+    }
+    .modal-search .search button {
+        width: 100%;
+        padding: 12px;
+    }
+}

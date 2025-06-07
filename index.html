@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experience the beauty of Japanese floral artistry in Nagpur. Hand to Haru offers exquisite flower arrangements, bouquets, and gifts for all occasions." />
+  <meta name="keywords" content="flowers, bouquets, floral arrangements, gifts, Nagpur, Japanese flowers, wedding flowers" />
+  <meta name="author" content="Utkarsha Dhok" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+  <title>Hand to Haru | Floral & Gifts</title>
+</head>
+<body>
+  <header>
+    <div class="global-notification">
+      <div class="container">
+        <p>
+          Celebrate Spring with Our Special Sakura Collection - Free Delivery in Nagpur! <a href="shop.html">SHOP NOW</a>
+        </p>
+      </div>
+    </div>
+    <div class="header-row">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="header-mobile">
+            <i class="bi bi-list" id="btn-menu"></i>
+          </div>
+          <div class="header-left">
+            <a href="index.html" class="logo">Hand to Haru</a>
+          </div>
+          <div class="header-center" id="sidebar">
+            <nav class="navigation">
+              <ul class="menu-list">
+                <li class="menu-list-item">
+                  <a href="index.html" class="menu-link active">Home</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="shop.html" class="menu-link">Shop</a>
+                  <div class="menu-dropdown-wrapper">
+                    <ul class="menu-dropdown-content">
+                      <li><a href="shop.html?category=fresh-bouquets">Fresh Bouquets</a></li>
+                      <li><a href="shop.html?category=wedding-flowers">Wedding Flowers</a></li>
+                      <li><a href="shop.html?category=gift-hampers">Gift Hampers</a></li>
+                      <li><a href="shop.html?category=floral-accessories">Floral Accessories</a></li>
+                      <li><a href="shop.html?category=seasonal">Seasonal Collections</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item">
+                  <a href="#" class="menu-link">Occasions</a>
+                  <div class="menu-dropdown-wrapper">
+                    <ul class="menu-dropdown-content">
+                      <li><a href="shop.html?occasion=birthday">Birthday</a></li>
+                      <li><a href="shop.html?occasion=anniversary">Anniversary</a></li>
+                      <li><a href="shop.html?occasion=wedding">Wedding</a></li>
+                      <li><a href="shop.html?occasion=corporate">Corporate Events</a></li>
+                      <li><a href="shop.html?occasion=festivals">Festivals</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item">
+                  <a href="#" class="menu-link">Services</a>
+                  <div class="menu-dropdown-wrapper">
+                    <ul class="menu-dropdown-content">
+                      <li><a href="shop.html?service=same-day">Same Day Delivery</a></li>
+                      <li><a href="shop.html?service=wedding-consultation">Wedding Consultation</a></li>
+                      <li><a href="shop.html?service=corporate">Corporate Services</a></li>
+                      <li><a href="shop.html?service=event-decoration">Event Decoration</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-list-item">
+                  <a href="blog.html" class="menu-link">Blog</a>
+                </li>
+                <li class="menu-list-item">
+                  <a href="contact.html" class="menu-link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <i class="bi-x-circle" id="close-sidebar"></i>
+          </div>
+          <div class="header-right">
+            <div class="header-right-links">
+              <a href="account.html" class="header-account">
+                <i class="bi bi-person"></i>
+              </a>
+              <button class="search-button">
+                <i class="bi bi-search"></i>
+              </button>
+              <a href="cart.html">
+                <i class="bi bi-heart"></i>
+              </a>
+              <div class="header-cart">
+                <a href="cart.html" class="header-cart-link">
+                  <i class="bi bi-bag"></i>
+                  <span class="header-cart-count">0</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="modal-search">
+    <div class="modal-wrapper">
+      <h3 class="modal-title">Search Products</h3>
+      <p class="modal-text">Start typing to see products you are looking for.</p>
+      <form class="search-form" onsubmit="return false;">
+        <div class="search">
+          <input type="text" id="search-input" placeholder="What are you looking for?" aria-label="Search products" />
+          <button type="submit" id="search-button" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+      <div class="search-result">
+        <div class="search-heading">
+          <h3>Results</h3>
+        </div>
+        <div class="results">
+        </div>
+      </div>
+      <i class="bi bi-x-circle" id="close-modal-search" aria-label="Close search"></i>
+    </div>
+  </div>
+  <section class="hero-slider">
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="hero-item">
+              <img src="images/banner1.webp" alt="Fresh Floral Arrangements" class="hero-image">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="hero-item">
+              <img src="images/banner2.jpg" alt="Elegant Wedding Flowers" class="hero-image">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="hero-item">
+              <img src="images/banner3.webp" alt="Luxury Gift Hampers" class="hero-image">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="hero-item">
+              <img src="images/banner4.webp" alt="Special Occasion Flowers" class="hero-image">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h2 class="fade-in">Blooms of Harmony</h2>
+      <p class="fade-in-delay-1">Exquisite floral artistry for life's precious moments</p>
+      <a href="shop.html" class="btn btn-primary fade-in-delay-2">Explore Collection</a>
+    </div>
+  </section>
+  <section class="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2>Shop by Category</h2>
+      </div>
+      <ul class="category-list">
+        <li class="category-item">
+          <a href="shop.html?category=premium-roses">
+            <img src="images/roses.webp" alt="Premium Roses" class="category-image">
+            <span>Premium Roses</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="shop.html?category=exotic-orchids">
+            <img src="images/orchids.webp" alt="Exotic Orchids" class="category-image">
+            <span>Exotic Orchids</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="shop.html?category=sunflowers">
+            <img src="images/sunflowers.webp" alt="Sunflowers" class="category-image">
+            <span>Sunflowers</span>
+          </a>
+        </li>
+        <li class="category-item">
+          <a href="shop.html?category=gift-sets">
+            <img src="images/giftset.webp" alt="Gift Sets" class="category-image">
+            <span>Gift Sets</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Products</h2>
+      </div>
+      <div class="product-wrapper">
+        <ul class="product-list">
+          <li class="product-item">
+              <div class="product-image">
+              <a href="product.html?id=forever-rose">
+                <img src="images/foreverrose.webp" alt="Forever Rose" class="img1">
+                <img src="images/foreverrose-hover.webp" alt="Forever Rose Close-up" class="img2">
+                </a>
+              </div>
+              <div class="product-info">
+              <a href="product.html?id=forever-rose" class="product-title">Eternal Love Rose</a>
+              <div class="product-prices">
+                <strong class="new-price">₹2,499</strong>
+                <span class="old-price">₹2,999</span>
+              </div>
+              <div class="product-buttons">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
+              </div>
+            </div>
+                  </li>
+          <li class="product-item">
+            <div class="product-image">
+              <a href="#">
+                <img src="images/daisyandorchids.webp" alt="Daisy & Orchids" class="img1">
+                <img src="images/daisyandorchids.webp" alt="Daisy & Orchids" class="img2">
+              </a>
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Spring Symphony</a>
+                <div class="product-prices">
+                <strong class="new-price">₹3,499</strong>
+                <span class="old-price">₹3,999</span>
+              </div>
+              <span class="product-discount">12%</span>
+                </div>
+          </li>
+          <li class="product-item">
+            <div class="product-image">
+                  <a href="#">
+                <img src="images/hamper1.webp" alt="Luxury Gift Hamper" class="img1">
+                <img src="images/hamper1.webp" alt="Luxury Gift Hamper" class="img2">
+                  </a>
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Deluxe Gift Hamper</a>
+              <div class="product-prices">
+                <strong class="new-price">₹4,999</strong>
+                <span class="old-price">₹5,999</span>
+              </div>
+              <span class="product-discount">16%</span>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-image">
+                  <a href="#">
+                <img src="images/rosybloomsandchococake.webp" alt="Roses & Cake Combo" class="img1">
+                <img src="images/rosybloomsandchococake.webp" alt="Roses & Cake Combo" class="img2">
+                  </a>
+                </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Sweet Love Combo</a>
+              <div class="product-prices">
+                <strong class="new-price">₹3,999</strong>
+                <span class="old-price">₹4,499</span>
+              </div>
+              <span class="product-discount">11%</span>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </section>
+  <section class="featured-collections">
+    <div class="container">
+      <div class="collections-wrapper">
+        <div class="collection-item">
+          <div class="collection-content">
+            <h2 class="collection-title">Wedding Collection</h2>
+            <p class="collection-desc">Make your special day unforgettable</p>
+            <img src="images/whiteroses.webp" alt="Elegant white roses bouquet for weddings" class="collection-image">
+            <a href="shop.html?category=wedding" class="btn-collection">View Collection</a>
+          </div>
+        </div>
+        <div class="collection-item">
+          <div class="collection-content">
+            <h2 class="collection-title">Gift Hampers</h2>
+            <p class="collection-desc">Curated gifts for every occasion</p>
+            <img src="images/hamper3.webp" alt="Luxury gift hamper with sweets and decorations" class="collection-image">
+            <a href="shop.html?category=gift-hampers" class="btn-collection">Explore More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blogs">
+    <div class="container">
+      <div class="section-title">
+        <h2>Floral Inspiration</h2>
+        <p>Stories from our garden</p>
+      </div>
+      <div class="blog-list">
+        <div class="blog-card">
+          <img src="images/flowersandmodel.webp" alt="Flower Care Guide">
+          <div class="blog-content">
+            <h3>The Art of Flower Care</h3>
+            <p>Tips to make your blooms last longer</p>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/wildblloms.webp" alt="Wild Blooms">
+          <div class="blog-content">
+            <h3>Wild & Free: Natural Arrangements</h3>
+            <p>Embracing the beauty of wild flowers</p>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="images/sunshine.webp" alt="Seasonal Guide">
+          <div class="blog-content">
+            <h3>Seasonal Flower Guide</h3>
+            <p>Best blooms for every season</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brands">
+    <div class="container">
+      <ul class="brand-list">
+        <li class="brand-item">
+          <img src="images/brand1.webp" alt="Brand Partner">
+        </li>
+        <li class="brand-item">
+          <img src="images/brand2.webp" alt="Brand Partner">
+        </li>
+        <li class="brand-item">
+          <img src="images/brand3.webp" alt="Brand Partner">
+        </li>
+        <li class="brand-item">
+          <img src="images/brand4.webp" alt="Brand Partner">
+        </li>
+        <li class="brand-item">
+          <img src="images/brand5.webp" alt="Brand Partner">
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="story-harmony">
+    <div class="container">
+      <div class="story-harmony-wrapper">
+        <div class="story-content">
+          <h2 class="section-title">Our Story</h2>
+          <div class="story-text">
+            <p>Based in the heart of Nagpur, we craft each arrangement with care, combining seasonal blooms with timeless design principles. Our commitment to sustainability means we source locally when possible and use eco-friendly packaging, ensuring our beauty doesn't come at nature's expense.</p>
+          </div>
+        </div>
+        <div class="harmony-content">
+          <h2 class="harmony-title">Blooms of Harmony</h2>
+          <p class="harmony-desc">Exquisite floral artistry for life's precious moments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="parallax-section">
+    <div class="parallax-bg" style="background-image: url('images/scrollflower.jpeg');">
+      <div class="parallax-content">
+        <h2>Crafted with Love</h2>
+        <p>Every arrangement tells a unique story</p>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="testimonials-wrapper">
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <p>"The attention to detail in their arrangements is exceptional. My wedding flowers were absolutely perfect!"</p>
+            <div class="testimonial-author">
+              <h4>Priya Sharma</h4>
+              <span>Bride</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <p>"Their sustainable practices and local sourcing make me feel good about every purchase. The flowers are always fresh and beautiful."</p>
+            <div class="testimonial-author">
+              <h4>Rajesh Patel</h4>
+              <span>Regular Customer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <p>"The fusion of Japanese and Indian elements in their designs is unique and absolutely stunning. A true gem in Nagpur!"</p>
+            <div class="testimonial-author">
+              <h4>Meera Desai</h4>
+              <span>Corporate Client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="brands">
+    <div class="container">
+      <ul class="brand-list">
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand1.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand2.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand3.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand4.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand5.png" alt="" />
+          </a>
+        </li>
+        <li class="brand-item">
+          <a href="#">
+            <img src="img/brands/brand1.png" alt="" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="policy">
+    <div class="container">
+      <ul class="policy-list">
+        <li class="policy-item">
+          <i class="bi bi-flower1"></i>
+          <div class="policy-texts">
+            <strong>FRESH GUARANTEE</strong>
+            <span>7-Day Freshness Promise</span>
+          </div>
+        </li>
+        <li class="policy-item">
+          <i class="bi bi-clock"></i>
+          <div class="policy-texts">
+            <strong>SAME DAY DELIVERY</strong>
+            <span>In Nagpur City</span>
+          </div>
+        </li>
+        <li class="policy-item">
+          <i class="bi bi-heart"></i>
+          <div class="policy-texts">
+            <strong>CUSTOM DESIGNS</strong>
+            <span>Personalized Arrangements</span>
+          </div>
+        </li>
+        <li class="policy-item">
+          <i class="bi bi-shield-check"></i>
+          <div class="policy-texts">
+            <strong>SECURE PAYMENT</strong>
+            <span>100% Protected Checkout</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="subscribe-contact-row">
+      <div class="container">
+        <div class="subscribe-contact-wrapper">
+          <div class="subscribe-wrapper">
+            <div class="footer-subscribe">
+              <div class="footer-subscribe-top">
+                <h3 class="subscribe-title">
+                  Join our floral family for exclusive updates
+                </h3>
+                <p class="subscribe-desc">
+                  Subscribe and receive ₹500 off your first order above ₹2000
+                </p>
+              </div>
+              <div class="footer-subscribe-bottom">
+                <form>
+                  <input type="text" placeholder="Enter your email address" />
+                  <button class="btn">Subscribe</button>
+                </form>
+                <p class="privacy-text">
+                  By subscribing you agree to our
+                  <a href="#">Terms & Conditions and Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-wrapper">
+            <div class="footer-contact-top">
+              <h3 class="contact-title">Need assistance? <br>
+                (+91) 712-123-4567
+              </h3>
+              <p class="contact-desc">We're available 9:00am – 8:00pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="widgets-row">
+      <div class="container">
+        <div class="footer-widgets">
+          <div class="brand-info">
+            <div class="footer-logo">
+              <a href="/" class="logo">Hana to Haru</a>
+            </div>
+            <div class="footer-desc">
+              Where Japanese floral artistry meets Indian celebrations. Bringing beauty, elegance and joy to every occasion with our handcrafted arrangements.
+            </div>
+            <div class="footer-contact">
+              <p>
+                <a href="tel:+917121234567">(+91) 712-123-4567</a> -
+                <a href="mailto:hello@hanatoharu.in">hello@hanatoharu.in</a>
+              </p>
+            </div>
+          </div>
+          <div class="widget-nav-menu">
+            <h4>Information</h4>
+            <ul class="menu-list">
+              <li><a href="shop.html?category=care-guide">Flower Care Guide</a></li>
+              <li><a href="shop.html?service=delivery">Delivery Information</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="widget-nav-menu">
+            <h4>Quick Links</h4>
+            <ul class="menu-list">
+              <li><a href="shop.html?category=fresh-bouquets">Fresh Flowers</a></li>
+              <li><a href="shop.html?category=gift-hampers">Gift Hampers</a></li>
+              <li><a href="shop.html?category=wedding-flowers">Wedding Flowers</a></li>
+              <li><a href="shop.html?service=corporate">Corporate Orders</a></li>
+              <li><a href="account.html">My Account</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-row">
+      <div class="container">
+        <div class="footer-copyright">
+          <div class="site-copyright">
+            <p>© 2024 Hana to Haru. Designed with <span class="heart">❤️</span> by Utkarsha Dhok</p>
+          </div>
+          <div class="footer-menu">
+            <ul class="footer-menu-list">
+              <li class="list-item"><a href="shop.html?page=privacy">Privacy Policy</a></li>
+              <li class="list-item"><a href="shop.html?page=terms">Terms and Conditions</a></li>
+              <li class="list-item"><a href="shop.html?page=returns">Returns Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/slider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script>
+    new Glide('.glide', {
+      type: 'carousel',
+      autoplay: 5000,
+      hoverpause: true,
+      animationDuration: 1000,
+      animationTimingFunc: 'ease-in-out',
+      gap: 0
+    }).mount();
+  </script>
+</body>
+</html>

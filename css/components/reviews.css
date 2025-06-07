@@ -1,0 +1,137 @@
+/* ! comment item start */
+.comment-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.comment-avatar {
+    flex-shrink: 0;
+}
+
+.comment-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-text {
+    flex-grow: 1;
+}
+
+.comment-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 7px;
+}
+
+.comment-stars i {
+    color: gold;
+    font-size: 12px;
+}
+
+.comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 7px;
+}
+
+.comment-meta strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.comment-description {
+    font-size: 14px;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+.required {
+    color: #e51414;
+}
+
+.review-form-wrapper h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+    border-bottom: 1px solid #dee0ea;
+    padding-bottom: 16px;
+}
+
+.comment-notes {
+    font-size: 14px;
+}
+
+.comment-form {
+    margin: 30px 0;
+}
+
+.comment-form-rating {
+    display: flex;
+    gap: 3px;
+    margin: 10px 0;
+}
+
+.comment-form-rating .star {
+    cursor: pointer;
+    transition: .2s ease color;
+}
+
+.comment-form-rating .star:hover {
+    color: gold;
+}
+
+.comment-form-rating .star.active {
+    color: gold;
+}
+
+.comment-form-rating .star i {
+    font-size: 14px;
+}
+
+.comment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-comment label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-comment textarea {
+    padding: 6px 12px;
+    border: 1px solid #dee0ea;
+    outline: none;
+}
+
+.form-comment textarea:focus {
+    border-color: #e51414;
+}
+
+.form-submit input {
+    padding: 6px 12px;
+    background-color: #e51414;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 160px;
+}
+
