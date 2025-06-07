@@ -23,6 +23,20 @@ function initShop() {
     initSort();
     initAddToCart();
     initAddToWishlist();
+
+    // Handle URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+    const occasion = urlParams.get('occasion');
+    const service = urlParams.get('service');
+
+    if (category) {
+        applyFilter(category);
+    } else if (occasion) {
+        applyFilter(occasion);
+    } else if (service) {
+        applyFilter(service);
+    }
 }
 function initMobileMenu() {
     const menuButton = document.querySelector('.mobile-menu-button');
@@ -42,9 +56,23 @@ function initFilters() {
 }
 function applyFilter(filter) {
     const products = document.querySelectorAll('.product-card');
+    const filterLower = filter.toLowerCase();
     products.forEach(product => {
-        const category = product.dataset.category;
-        product.style.display = filter === 'all' || category === filter ? 'block' : 'none';
+        const category = product.dataset.category?.toLowerCase();
+        const occasion = product.dataset.occasion?.toLowerCase();
+        const service = product.dataset.service?.toLowerCase();
+
+        product.style.display =
+            filterLower === 'all' ||
+                category === filterLower ||
+                occasion === filterLower ||
+                service === filterLower ? 'block' : 'none';
+    });
+
+    // Update active state of filter buttons
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach(button => {
+        button.classList.toggle('active', button.dataset.filter.toLowerCase() === filterLower);
     });
 }
 function initSort() {
