@@ -4,17 +4,20 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop - Hand to Haru</title>
+  <title>Shop - Hana to Haru</title>
   <link href="https://fonts.googleapis.com/css2?family=Meddon&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="global-notification">
-      <p>Free Delivery on Orders Above ₹2000 in Nagpur</p>
+  <div class="global-notification">
+    <div class="container">
+      <p>Welcome to Hana to Haru - Where Japanese floral artistry meets Indian celebrations</p>
     </div>
+  </div>
+
+  <header>
     <div class="header-row">
       <div class="container">
         <div class="header-wrapper">
@@ -22,9 +25,9 @@
             <i class="bi bi-list" id="btn-menu"></i>
           </div>
           <div class="header-left">
-            <a href="index.html" class="logo">Hand to Haru</a>
+            <a href="index.html" class="logo">Hana to Haru</a>
           </div>
-          <div class="header-center" id="sidebar">
+          <div class="header-center">
             <nav class="navigation">
               <ul class="menu-list">
                 <li class="menu-list-item">
@@ -32,45 +35,15 @@
                 </li>
                 <li class="menu-list-item">
                   <a href="shop.html" class="menu-link active">Shop</a>
-                  <div class="menu-dropdown-wrapper">
-                    <ul class="menu-dropdown-content">
-                      <li><a href="shop.html?category=fresh-bouquets">Fresh Bouquets</a></li>
-                      <li><a href="shop.html?category=wedding-flowers">Wedding Flowers</a></li>
-                      <li><a href="shop.html?category=gift-hampers">Gift Hampers</a></li>
-                      <li><a href="shop.html?category=floral-accessories">Floral Accessories</a></li>
-                      <li><a href="shop.html?category=seasonal">Seasonal Collections</a></li>
-                    </ul>
-                  </div>
                 </li>
                 <li class="menu-list-item">
-                  <a href="#" class="menu-link">Occasions</a>
-                  <div class="menu-dropdown-wrapper">
-                    <ul class="menu-dropdown-content">
-                      <li><a href="shop.html?occasion=birthday">Birthday</a></li>
-                      <li><a href="shop.html?occasion=anniversary">Anniversary</a></li>
-                      <li><a href="shop.html?occasion=wedding">Wedding</a></li>
-                      <li><a href="shop.html?occasion=corporate">Corporate Events</a></li>
-                      <li><a href="shop.html?occasion=festivals">Festivals</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="menu-list-item">
-                  <a href="#" class="menu-link">Services</a>
-                  <div class="menu-dropdown-wrapper">
-                    <ul class="menu-dropdown-content">
-                      <li><a href="shop.html?service=same-day">Same Day Delivery</a></li>
-                      <li><a href="shop.html?service=wedding-consultation">Wedding Consultation</a></li>
-                      <li><a href="shop.html?service=corporate">Corporate Services</a></li>
-                      <li><a href="shop.html?service=event-decoration">Event Decoration</a></li>
-                    </ul>
-                  </div>
+                  <a href="about.html" class="menu-link">About</a>
                 </li>
                 <li class="menu-list-item">
                   <a href="contact.html" class="menu-link">Contact</a>
                 </li>
               </ul>
             </nav>
-            <i class="bi-x-circle" id="close-sidebar"></i>
           </div>
           <div class="header-right">
             <div class="header-right-links">
@@ -81,7 +54,7 @@
                 <i class="bi bi-search"></i>
               </button>
               <a href="cart.html" class="header-cart">
-                <i class="bi bi-bag"></i>
+                <i class="bi bi-cart"></i>
                 <span class="header-cart-count">0</span>
               </a>
             </div>
@@ -90,252 +63,72 @@
       </div>
     </div>
   </header>
-  <section class="page-header">
-    <div class="container">
-      <div class="page-title">
-        <h1>Our Collection</h1>
+
+  <main>
+    <section class="homepage-product-section">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product1.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Spring Harmony</h3>
+          <p class="product-price">₹2,999</p>
+        </div>
       </div>
-      <div class="breadcrumb">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>Shop</li>
-        </ul>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/product2.jpg" alt="Product 2">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Summer Breeze</h3>
+          <p class="product-price">₹3,499</p>
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="shop-page">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="widgets-row">
       <div class="container">
-      <div class="shop-wrapper">
-        <div class="shop-filter">
-          <div class="filter-box">
-            <div class="filter-title">
-              <h4>Categories</h4>
-      </div>
-            <div class="filter-list">
-              <a href="shop.html?category=fresh-bouquets" class="filter-item">Fresh Bouquets</a>
-              <a href="shop.html?category=wedding-flowers" class="filter-item">Wedding Flowers</a>
-              <a href="shop.html?category=gift-hampers" class="filter-item">Gift Hampers</a>
-              <a href="shop.html?category=floral-accessories" class="filter-item">Floral Accessories</a>
-              <a href="shop.html?category=seasonal" class="filter-item">Seasonal Collections</a>
-    </div>
-          </div>
-          <div class="filter-box">
-            <div class="filter-title">
-              <h4>Occasions</h4>
-          </div>
-            <div class="filter-list">
-              <a href="shop.html?occasion=birthday" class="filter-item">Birthday</a>
-              <a href="shop.html?occasion=anniversary" class="filter-item">Anniversary</a>
-              <a href="shop.html?occasion=wedding" class="filter-item">Wedding</a>
-              <a href="shop.html?occasion=corporate" class="filter-item">Corporate Events</a>
-              <a href="shop.html?occasion=festivals" class="filter-item">Festivals</a>
-                        </div>
-                      </div>
-          <div class="filter-box">
-            <div class="filter-title">
-              <h4>Price Range</h4>
-                      </div>
-            <div class="filter-list">
-              <div class="filter-item">
-                <input type="checkbox" id="price-1" />
-                <label for="price-1">Under ₹1,000</label>
-                    </div>
-              <div class="filter-item">
-                <input type="checkbox" id="price-2" />
-                <label for="price-2">₹1,000 - ₹2,999</label>
-                  </div>
-              <div class="filter-item">
-                <input type="checkbox" id="price-3" />
-                <label for="price-3">₹3,000 - ₹4,999</label>
-          </div>
-              <div class="filter-item">
-                <input type="checkbox" id="price-4" />
-                <label for="price-4">₹5,000 and above</label>
-              </div>
+        <div class="footer-widgets">
+          <div class="brand-info">
+            <div class="footer-logo">
+              <a href="/" class="logo">Hana to Haru</a>
+            </div>
+            <div class="footer-desc">
+              Where Japanese floral artistry meets Indian celebrations. Bringing beauty, elegance and joy to every occasion with our handcrafted arrangements.
+            </div>
+            <div class="footer-contact">
+              <p>
+                <a href="tel:123456789">(+800) 1234 5678 90</a> -
+                <a href="mailto:info@example.com">info@example.com</a>
+              </p>
             </div>
           </div>
         </div>
-        <div class="shop-products">
-          <div class="shop-header">
-            <span>Showing 1-12 of 40 results</span>
-            <select class="sort-select">
-              <option value="default">Default sorting</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="newest">Newest First</option>
-            </select>
-          </div>
-          <div class="products-grid">
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/pinkroses.webp" alt="Pink Roses Bouquet">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
       </div>
     </div>
-              <div class="product-info">
-                <h3>Pink Paradise Bouquet</h3>
-                <div class="product-price">₹1,999</div>
-      </div>
-        </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="anniversary wedding">
-              <div class="product-image">
-                <img src="images/colorsroses.webp" alt="Mixed Color Roses">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-        </div>
-      </div>
-              <div class="product-info">
-                <h3>Rainbow Rose Collection</h3>
-                <div class="product-price">₹2,499</div>
-    </div>
-  </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/rosebouquethues.webp" alt="Rose Bouquet">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Romantic Rose Medley</h3>
-                <div class="product-price">₹2,999</div>
-              </div>
-                </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/whiteroses.webp" alt="White Roses">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Pure White Elegance</h3>
-                <div class="product-price">₹3,499</div>
-              </div>
-        </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/daisyandorchids.webp" alt="Daisy & Orchids">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-        </div>
-      </div>
-              <div class="product-info">
-                <h3>Spring Symphony</h3>
-                <div class="product-price">₹3,999</div>
-      </div>
-    </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/bubblesola.webp" alt="Bubble Sola">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Bubble Bliss Arrangement</h3>
-                <div class="product-price">₹2,799</div>
-              </div>
-                </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/wildblloms.webp" alt="Wild Blooms">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Wild Garden Bouquet</h3>
-                <div class="product-price">₹2,999</div>
-      </div>
-    </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/rosybloomsandchococake.webp" alt="Roses & Cake Combo">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          </div>
-              <div class="product-info">
-                <h3>Sweet Love Combo</h3>
-                <div class="product-price">₹4,499</div>
-          </div>
-          </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/hamper1.webp" alt="Gift Hamper">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-    </div>
-              </div>
-              <div class="product-info">
-                <h3>Deluxe Gift Hamper</h3>
-                <div class="product-price">₹5,999</div>
-              </div>
-            </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/giftset.webp" alt="Premium Gift Set">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-            </div>
-              <div class="product-info">
-                <h3>Premium Celebration Set</h3>
-                <div class="product-price">₹4,999</div>
-              </div>
-            </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/crochetlily.webp" alt="Crochet Lily">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-        </div>
-              <div class="product-info">
-                <h3>Handcrafted Crochet Lily</h3>
-                <div class="product-price">₹1,499</div>
-    </div>
-            </div>
-            <div class="product-card" data-category="fresh-bouquets" data-occasion="birthday anniversary">
-              <div class="product-image">
-                <img src="images/foreverrose.webp" alt="Forever Rose">
-                <div class="product-buttons">
-                  <button class="add-to-cart">Add to Cart</button>
-                  <button class="add-to-wishlist"><i class="bi bi-heart"></i></button>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3>Eternal Love Forever Rose</h3>
-                <div class="product-price">₹2,499</div>
-            </div>
-            </div>
-          </div>
-          <div class="pagination">
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#"><i class="bi bi-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div id="footer"></div>
-  <script src="js/main.js"></script>
-  <script src="js/shop.js"></script>
+  </footer>
+
+  <nav class="mobile-bottom-nav">
+    <a href="index.html">
+      <i class="bi bi-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="shop.html">
+      <i class="bi bi-grid"></i>
+      <span>Categories</span>
+    </a>
+    <a href="cart.html">
+      <i class="bi bi-cart"></i>
+      <span>Cart</span>
+    </a>
+    <a href="account.html">
+      <i class="bi bi-person"></i>
+      <span>Account</span>
+    </a>
+  </nav>
+
+  <script src="js/mobile.js"></script>
 </body>
 </html>
