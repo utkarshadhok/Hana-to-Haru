@@ -75,6 +75,33 @@ class AppManager {
                 modalSearch.style.opacity = '0';
             });
         }
+
+        // Mobile Menu
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const overlay = document.querySelector('.overlay');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        btnMenu?.addEventListener('click', toggleMobileMenu);
+        mobileMenuClose?.addEventListener('click', toggleMobileMenu);
+        overlay?.addEventListener('click', toggleMobileMenu);
+
+        // Mobile Bottom Nav Active State
+        const currentPath = window.location.pathname;
+        const mobileNavLinks = document.querySelectorAll('.mobile-bottom-nav a');
+
+        mobileNavLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath.split('/').pop()) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
     }
     showNotification(message, type = 'success') {
         const notification = document.createElement('div');
