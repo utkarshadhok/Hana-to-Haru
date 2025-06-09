@@ -47,19 +47,42 @@ class AppManager {
         }
     }
     setupEventListeners() {
-        const btnMenu = document.getElementById('btn-menu');
-        const sidebar = document.getElementById('sidebar');
-        const closeSidebar = document.getElementById('close-sidebar');
-        if (btnMenu && sidebar) {
-            btnMenu.addEventListener('click', () => {
-                sidebar.style.transform = 'translateX(0)';
-            });
+        const btnMenu = document.querySelector('#btn-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const overlay = document.querySelector('.overlay');
+        let isMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
         }
-        if (closeSidebar && sidebar) {
-            closeSidebar.addEventListener('click', () => {
-                sidebar.style.transform = 'translateX(-100%)';
-            });
+
+        function handleMenuClick(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
         }
+
+        function handleOverlayClick(e) {
+            e.stopPropagation();
+            if (isMenuOpen) {
+                toggleMobileMenu();
+            }
+        }
+
+        function handleDocumentClick(e) {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && e.target !== btnMenu) {
+                toggleMobileMenu();
+            }
+        }
+
+        btnMenu?.addEventListener('click', handleMenuClick);
+        mobileMenuClose?.addEventListener('click', handleMenuClick);
+        overlay?.addEventListener('click', handleOverlayClick);
+        document.addEventListener('click', handleDocumentClick);
+
         const searchButton = document.querySelector('.search-button');
         const modalSearch = document.querySelector('.modal-search');
         const modalCloseButton = document.getElementById('close-modal-search');
@@ -76,22 +99,6 @@ class AppManager {
             });
         }
 
-        // Mobile Menu
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        const overlay = document.querySelector('.overlay');
-
-        function toggleMobileMenu() {
-            mobileMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        }
-
-        btnMenu?.addEventListener('click', toggleMobileMenu);
-        mobileMenuClose?.addEventListener('click', toggleMobileMenu);
-        overlay?.addEventListener('click', toggleMobileMenu);
-
-        // Mobile Bottom Nav Active State
         const currentPath = window.location.pathname;
         const mobileNavLinks = document.querySelectorAll('.mobile-bottom-nav a');
 
@@ -101,6 +108,29 @@ class AppManager {
             } else {
                 link.classList.remove('active');
             }
+        });
+
+        const productCards = document.querySelectorAll('.product-card');
+        const observerOptions = {
+            root: null,
+            rootMargin: '50px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        productCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            observer.observe(card);
         });
     }
     showNotification(message, type = 'success') {
